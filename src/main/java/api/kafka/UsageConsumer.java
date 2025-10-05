@@ -17,10 +17,9 @@ public class UsageConsumer {
         try {
             System.out.println("Received usage event: " + event);
             stripeUsageClient.reportUsage(
-                    event.getSubscriptionItemId(),
+                    event.getCustomerId(),
                     event.getUnits(),
-                    event.getTimestamp()
-            );
+                    event.getTimestamp());
         } catch (Exception e) {
             System.err.println("Error reporting usage to Stripe: " + e.getMessage());
             e.printStackTrace();

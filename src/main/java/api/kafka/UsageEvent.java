@@ -1,24 +1,24 @@
 package api.kafka;
 
 public class UsageEvent {
-    private String subscriptionItemId;
+    private String customerId;
     private long units;
     private long timestamp;
 
     public UsageEvent() {}
 
-    public UsageEvent(String subscriptionItemId, long units, long timestamp) {
-        this.subscriptionItemId = subscriptionItemId;
+    public UsageEvent(String customerId, long units, long timestamp) {
+        this.customerId = customerId;
         this.units = units;
         this.timestamp = timestamp;
     }
 
-    public String getSubscriptionItemId() {
-        return subscriptionItemId;
+    public String getCustomerId() {
+        return customerId;
     }
 
-    public void setSubscriptionItemId(String subscriptionItemId) {
-        this.subscriptionItemId = subscriptionItemId;
+    public void setCustomerId(String customerId) {
+        this.customerId = customerId;
     }
 
     public long getUnits() {
@@ -40,7 +40,7 @@ public class UsageEvent {
     @Override
     public String toString() {
         return "UsageEvent{" +
-                "subscriptionItemId='" + subscriptionItemId + '\'' +
+                "customerId='" + customerId + '\'' +
                 ", units=" + units +
                 ", timestamp=" + timestamp +
                 '}';
